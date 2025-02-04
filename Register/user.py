@@ -26,18 +26,21 @@ class Register:
             print(vars(estudiante))
     
     def editUser(self, student_id):
+        newUserDetails = None
+        for student in self.students:
+            if student.id == student_id:
+                newUserDetails = student
+                break
+            else:
+                print("Usuario no encontrado con ese ID.")
         
-        if not student_id in self.students:
-            print("Error: El usuario con esa ID no existe.")
-        else:
-            new_name = input("Digite el nuevo nombre")
-            new_subject = input("Digite la nueva materia")
-            new_note = input("Digite la nueva nota")
-            
-            self.student.id == student_id
-            self.student.name = new_name
-            self.student.subject = new_subject
-            self.student.note = new_note
+        new_name = input("Digite el nuevo nombre")
+        new_subject = input("Digite la nueva materia")
+        new_note = input("Digite la nueva nota")
+                
+        newUserDetails.name = new_name
+        newUserDetails.subject = new_subject
+        newUserDetails.note = new_note
 
     def removeUser(self,student_id):
         for student in self.students:
