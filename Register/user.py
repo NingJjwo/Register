@@ -1,8 +1,15 @@
 class Person:
-    
+    """
+    A class representing a Person.
+
+    Attributes:
+        name (str): The name of the person.
+        id (int): The ID of the person.
+    """
     def __init__(self,name,id):
         self.name = name
         self.id = id
+        
         
 class Student(Person):
     
@@ -17,6 +24,15 @@ class Register:
             self.students = []
 
     def addUser(self,User):
+    """
+    Add a Student object to the students list.
+
+    Args:
+        Student (object): The Student object to be added to the students list.
+
+    Returns:
+        None
+    """
             self.students.append(User)
         
     def listUsers(self):
